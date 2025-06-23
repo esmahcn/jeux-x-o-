@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+/* Base reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,67 +6,72 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #f1f2f6, #dff9fb);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a29bfe, #dfe6ff);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 /* Title */
 h1 {
+  color: #6c5ce7;
   margin-bottom: 20px;
-  color: #2d3436;
+  text-shadow: 1px 1px 2px #b2bec3;
 }
 
-/* Game board styling */
+/* Game board */
 .game {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  gap: 10px;
+  grid-template-columns: repeat(3, 110px);
+  gap: 12px;
   margin-bottom: 20px;
 }
 
-/* Cell styling */
+/* Each cell */
 .cell {
-  width: 100px;
-  height: 100px;
-  background-color: #ffffff;
-  border: 2px solid #636e72;
+  width: 110px;
+  height: 110px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(108, 92, 231, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2d3436;
+  color: #6c5ce7;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .cell:hover {
-  background-color: #dfe6e9;
+  background-color: #f3f0ff;
+  transform: scale(1.05);
 }
 
-/* Game status text */
+/* Game status */
 #status {
   font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #0984e3;
+  color: #6c5ce7;
+  margin-bottom: 20px;
 }
 
-/* Reset button styling */
+/* Reset button */
 button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 1rem;
-  background-color: #00cec9;
   color: white;
+  background-color: #6c5ce7;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(108, 92, 231, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #00b894;
+  background-color: #5a4bcf;
 }
